@@ -11,6 +11,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import pkg.Calculadora;
+
 /**
  * 
  */
@@ -55,13 +57,13 @@ class CalculadoraTest {
 	}	
 
 	@Test
-	void testMultiplicacion() {
-		assertEquals(6, Calculadora.multiplicacion(2,3));
+	void testMultiplica() {
+		assertEquals(6, Calculadora.multiplica(2,3));
 	}	
 
 	@Test
-	void testDivision() {
-		assertEquals(2, Calculadora.division(6,3));
+	void testDivide() {
+		assertEquals(2, Calculadora.divide(6,3));
 	}	
 
 }
