@@ -11,19 +11,21 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import pkg.Cuenta;
+
 /**
  * 
  */
 class CuentaTest {
 
-	Cuenta cuenta;
+	private static Cuenta cuenta;
 	
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		cuenta = new Cuenta(0);
+		cuenta = new Cuenta(null, null, 0);
 	}
 
 	/**
@@ -38,6 +40,7 @@ class CuentaTest {
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
+		//cuenta.setSaldo(0.0);
 	}
 
 	/**
