@@ -53,13 +53,13 @@ public class Cuenta {
 
 	public void ingresar(double ingreso) {
 		// TODO Auto-generated method stub
-		saldo = 500.0;;
+		saldo += ingreso;
 	}
 
 
 	public void retirar(double retiro) {
 		// TODO Auto-generated method stub
-		saldo = -500.0;
+		saldo -= retiro;
 	}
 	
 	
