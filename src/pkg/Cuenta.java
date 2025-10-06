@@ -9,7 +9,7 @@ package pkg;
 public class Cuenta {
 
 	private final String numero, titular;
-	private double saldo;
+	private Double saldo;
 	
 	
 	public Cuenta(String numero, String titular, double saldo) {
