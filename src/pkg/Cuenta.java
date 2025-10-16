@@ -59,7 +59,9 @@ public class Cuenta {
 
 	public void retirar(double retiro) {
 		// TODO Auto-generated method stub
-		saldo -= retiro;
+		if (saldo - retiro >= -500.0) {
+			saldo -= retiro;
+		}
 	}
 	
 	

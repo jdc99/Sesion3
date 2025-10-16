@@ -18,7 +18,7 @@ import pkg.Cuenta;
  */
 class CuentaTest {
 
-	private static Cuenta cuenta;
+	private static Cuenta cuenta, cuenta12345, cuenta67890;
 	
 	/**
 	 * @throws java.lang.Exception
@@ -26,6 +26,8 @@ class CuentaTest {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 		cuenta = new Cuenta(null, null, 0);
+		cuenta12345 = new Cuenta("12345", null, 50);
+		cuenta67890 = new Cuenta("67890", null, 0);
 	}
 
 	/**
@@ -62,4 +64,18 @@ class CuentaTest {
 		assertEquals(-500, cuenta.getSaldo());
 	}
 
+	@Test
+	void test0014() {
+		cuenta12345.retirar(200);
+		cuenta67890.retirar(350);
+		cuenta12345.ingresar(100);
+		cuenta67890.retirar(200);
+		cuenta67890.retirar(150);
+		cuenta12345.retirar(200);
+		cuenta67890.ingresar(50);
+		cuenta67890.retirar(100);
+		
+		assertEquals(-250, cuenta12345.getSaldo());
+		assertEquals(-450, cuenta67890.getSaldo());
+	}
 }
